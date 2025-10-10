@@ -23,12 +23,15 @@ function staircaseshorter($n) {
 // using recursion
 
 function staircaserecur($n){
-    function recur($n,$current=1){
+    $current = 1;
+    function recur($n,$current){
         if($current>$n){
             return;
         }
-        recur($n,$current+1);
-        echo str_repeat(" ", $n - $current) . str_repeat("#", $current) . "\n";
+        
+        echo str_repeat(" ",$n-$current).str_repeat("#",$current)."\n";
+   recur($n,$current+1);
     }
+    echo recur($n,$current);
 }
 ?>
