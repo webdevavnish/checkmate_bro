@@ -8,9 +8,6 @@ function birthdayCakeCandles($candles) {
         if($candles[$i]==$highest){
             $count++;
         }
-        elseif($candles[$i]>$highest){
-            $highest = $candles[$i];
-        }
         else{
             break;
         }
